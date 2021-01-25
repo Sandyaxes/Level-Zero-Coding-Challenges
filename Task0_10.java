@@ -2,7 +2,7 @@ public class Task0_10 {
 
     static void commonChar(String input1, String input2){
        
-        String Output;
+        String Output = null;
         
         for (int i = 0; i < input1.length(); i++){
             
