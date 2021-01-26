@@ -2,7 +2,8 @@ public class Task0_10 {
 
     static void commonChar(String input1, String input2){
        
-        String Output = null;
+        String Output = "";
+        String common = "";
         
         for (int i = 0; i < input1.length(); i++){
             
@@ -10,18 +11,23 @@ public class Task0_10 {
                 
                 if (Character.toString(input1.charAt(i)).equalsIgnoreCase(Character.toString(input2.charAt(z)))){
                    
-                    Output = Character.toString(input1.charAt(i));
-                    
-                    System.out.print(Output);
+                     Output = Character.toString(input1.charAt(i));
+            
+                    common += "," + Output;
                     
                 }
+                
             }
+            
         }
+        common = common.substring(1, common.length());
+        System.out.print("Common letters: " + common);
+        
     }
 
     public static void main(String[] args) {
         
-        commonChar("house","computers");
+        commonChar("computers","house");
     }
 }
 
