@@ -5,12 +5,25 @@ public class Task0_8 {
         int hours = inputNum / 60;
         int minutes = inputNum % 60;
 
-        System.out.println(hours + " hour(s) ," + minutes + " minute(s)");
+        if(inputNum / 60 == 1){
+            if (inputNum % 60 == 1){
+                System.out.println(hours +" hour, " + minutes + " minute");
+            }else{
+                System.out.println(hours +" hour, " + minutes + " minutes");
+            }
+        }else {
+            if (inputNum % 60 == 1){
+                System.out.println(hours +" hours, " + minutes + " minute");
+            }
+            else {
+                System.out.println(hours +" hours, " + minutes + " minutes");
+            }
+        }
     }
 
     public static void main(String[] args) {
 
-        numToHours(133);
+        numToHours(71);
 
 
     }
